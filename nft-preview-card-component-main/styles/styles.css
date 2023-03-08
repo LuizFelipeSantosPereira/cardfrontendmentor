@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+:root{
+    --fonte: 'Outfit', sans-serif;
+    --azul-claro: hsl(215, 51%, 70%);
+    --ciano: hsl(178, 100%, 50%);
+    --azul-muito-escuro-bg: hsl(217, 54%, 11%);
+    --azul-muito-escuro-card:hsl(216, 50%, 16%);
+    --azul-muito-escuro-linha: hsl(215, 32%, 27%);
+    --branco: hsl(0, 0%, 100%);
+    --fonte-tamanho: 18px
+}
+body{
+    min-height: 100vh;
+    font-family: var(--fonte);
+    font-size: var(--fonte-tamanho);
+    background-color: var(--azul-muito-escuro-bg);
+    color: var(--azul-claro)
+}
+.card{
+    margin: 5% auto 0 auto;
+    background-color: var(--azul-muito-escuro-card);
+    width: 320px;
+    height: 80vh;
+    border-radius: 15px;
+    padding: 20px;
+}
+.card img{
+    width: 100%;
+    border-radius: 15px;
+}
+figcaption{
+    display: flex;
+    flex-direction: column;
+}
+figcaption h4{
+    margin-top: 10px;
+    color: var(--branco);
+    font-weight: 600;
+}
+figcaption p{
+    margin: 10px 0;
+    font-size: 14px;
+    font-weight: 300;
+}
+.container{
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.valor::before{
+    content: '';
+    display: inline-block;
+    background-image: url('/images/icon-ethereum.svg');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 15px;
+    width: 15px;
+}
+.valor{
+    font-size: 15px;
+    color: var(--ciano);
+}
+.tempo::before{
+    content: '';
+    display: inline-block;
+    background-image: url('/images/icon-clock.svg');
+    background-size:cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 15px;
+    width: 15px;
+}
+.tempo{
+    font-size: 15px;
+    text-align: center;
+}
+hr{
+    border-top: 1px solid var(--azul-muito-escuro-linha);
+}
